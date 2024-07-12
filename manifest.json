@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Get Cookie",
+  "version": "0.1",
+  "permissions": ["contextMenus", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*.samsung.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png"
+  }
+}
