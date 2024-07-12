@@ -1,11 +1,9 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "samsungRedirect",
-    title: "Get cookie",
+    title: "Grab a cookie and run back",
     contexts: ["page"],
-    documentUrlPatterns: [
-      "*://*.samsung.com/*/SystemParking.html",
-    ],
+    documentUrlPatterns: ["*://*.samsung.com/*/SystemParking.html"],
   });
 });
 
