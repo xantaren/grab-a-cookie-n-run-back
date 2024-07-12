@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Get Cookie",
-  "version": "0.1",
-  "permissions": ["contextMenus", "activeTab"],
+  "version": "0.2",
+  "permissions": ["webRequest", "webNavigation", "storage", "tabs","contextMenus", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
