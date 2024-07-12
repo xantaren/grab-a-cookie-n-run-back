@@ -42,16 +42,33 @@ chrome.webNavigation.onCompleted.addListener(
         console.log("Retrieved from storage:", result.originalUrl);
         if (result.originalUrl) {
           console.log("Redirecting back to:", result.originalUrl);
-          chrome.tabs.update(details.tabId, { url: result.originalUrl }, () => {
-            if (chrome.runtime.lastError) {
-              console.error("Error updating tab:", chrome.runtime.lastError);
-            } else {
-              console.log("Tab updated successfully");
-            }
+
+          // Send message to content script to show redirect hint
+          chrome.tabs.sendMessage(details.tabId, {
+            action: "showRedirectHint",
+            targetUrl: result.originalUrl
           });
-          chrome.storage.local.remove("originalUrl", () => {
-            console.log("Original URL removed from storage");
-          });
+
+          // Delay the redirect to allow time for the hint to be shown
+          setTimeout(() => {
+            chrome.tabs.update(
+              details.tabId,
+              { url: result.originalUrl },
+              () => {
+                if (chrome.runtime.lastError) {
+                  console.error(
+                    "Error updating tab:",
+                    chrome.runtime.lastError
+                  );
+                } else {
+                  console.log("Tab updated successfully");
+                }
+              }
+            );
+            chrome.storage.local.remove("originalUrl", () => {
+              console.log("Original URL removed from storage");
+            });
+          }, 3000); // 3 second delay
         } else {
           console.log("No original URL found in storage");
         }
