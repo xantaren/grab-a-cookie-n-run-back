@@ -1,13 +1,17 @@
 ### Overview
+---
 Get cookie is pain. This extension exists to alleviate that pain. 
 
 ### Usage
+---
 When redirected to "SystemParking.html" page, you can right-click and select "Get cookie" from the context menu. You'll be sent to the get cookie page and promptly redirected back to where you were.
 
 ### Screenshots
+---
 Nope
 
 ### Installation
+---
 This is an unofficial Chrome extension, please follow the steps below and install this extension in developer mode:
 
 1. Download or clone this repository to your local machine.
