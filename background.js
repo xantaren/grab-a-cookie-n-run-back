@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "samsungRedirect",
-    title: "Grab a cookie and run back",
+    title: "Grab a cookie",
     contexts: ["page"],
     documentUrlPatterns: ["*://*.samsung.com/*/SystemParking.html"],
   });
@@ -49,26 +49,19 @@ chrome.webNavigation.onCompleted.addListener(
             targetUrl: result.originalUrl
           });
 
-          // Delay the redirect to allow time for the hint to be shown
-          setTimeout(() => {
-            chrome.tabs.update(
-              details.tabId,
-              { url: result.originalUrl },
-              () => {
-                if (chrome.runtime.lastError) {
-                  console.error(
-                    "Error updating tab:",
-                    chrome.runtime.lastError
-                  );
-                } else {
-                  console.log("Tab updated successfully");
-                }
-              }
-            );
-            chrome.storage.local.remove("originalUrl", () => {
-              console.log("Original URL removed from storage");
-            });
-          }, 3000); // 3 second delay
+          // Redirect
+          chrome.tabs.update(details.tabId, { url: result.originalUrl }, () => {
+            if (chrome.runtime.lastError) {
+              console.error("Error updating tab:", chrome.runtime.lastError);
+            } else {
+              console.log("Tab updated successfully");
+            }
+          });
+
+          // Clean up storage
+          chrome.storage.local.remove("originalUrl", () => {
+            console.log("Original URL removed from storage");
+          }); 
         } else {
           console.log("No original URL found in storage");
         }

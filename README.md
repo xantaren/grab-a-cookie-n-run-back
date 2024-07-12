@@ -4,7 +4,7 @@ Get cookie is pain. This extension exists to alleviate that pain.
 
 ## Usage
 
-When redirected to "SystemParking.html" page, you can right-click and select "Grab a cookie and run back" from the context menu. You'll be sent to the get cookie page and promptly redirected back to where you were.
+When redirected to "SystemParking.html" page, you can right-click and select "Grab a cookie" from the context menu. You'll be sent to the get cookie page and promptly redirected back to where you were.
 
 ## Screenshots
 
