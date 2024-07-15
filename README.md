@@ -8,7 +8,8 @@ When redirected to "SystemParking.html" page, you can right-click and select "Gr
 
 ## Screenshots
 
-Nope
+![image](https://github.com/user-attachments/assets/85a85e6c-7054-4f98-9dc9-5c4f12f2d485)
+
 
 ## Installation
 
