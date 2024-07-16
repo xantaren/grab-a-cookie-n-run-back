@@ -1,6 +1,6 @@
 ## Overview
 
-Get cookie is pain. This extension exists to alleviate that pain. 
+Get cookie is pain. This extension serves to alleviate that pain. 
 
 ## Usage
 
