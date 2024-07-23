@@ -23,8 +23,8 @@ This is an unofficial Chrome extension, please follow the steps below and instal
 6. The extension should now be installed and visible in your Chrome browser.
 
 ## FAQ
-Q: I don't see the "Grab a cookie" option in the menu when I right click on the page. <br>
-A: It'll only show when you're on "SystemParking.html". I'm sure you wouldn't want to see the option everytime you right-click.
+**Q: I don't see the "Grab a cookie" option in the menu when I right-click on the page. <br>**
+**A:** It'll only show when you're on "SystemParking.html". I'm sure you wouldn't want to see the option every time you right-click.
 
-Q: Why is the extension disappearing from Chrome?<br>
-A: Don't remove the directory containing the extnesion. Removing the directory will effectively remove it from Chrome.
+**Q: Why is the extension disappearing from Chrome?<br>**
+**A:** Don't remove the directory containing the extension. Removing the directory will effectively remove it from Chrome.
